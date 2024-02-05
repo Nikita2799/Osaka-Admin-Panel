@@ -3,7 +3,7 @@ import config from "../../config/config";
 
 class TokenService {
   generateToken(userId: number): string {
-    return jwt.sign({ userId }, config.auth.access_token!, { expiresIn: "1h" });
+    return jwt.sign({ userId }, config.auth.access_token!, { expiresIn: "4h" });
   }
 
   verifyToken(token: string): { userId: number; exp: number } {

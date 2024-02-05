@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "hb_back",
+      name: "osaka_panel",
       script: "./dist/server.js",
       watch: true,
       watch_delay: 1000,

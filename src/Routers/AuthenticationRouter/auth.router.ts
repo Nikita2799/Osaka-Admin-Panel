@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { sign_in } from "../../Controllers/Auth/sign_in";
+import { sign_in } from "../../Controllers/AuthenticationController/sign_in";
+import { sign_up } from "../../Controllers/AuthenticationController/sign_up";
 
 class AuthRouter {
   private router: Router;
@@ -11,7 +12,7 @@ class AuthRouter {
 
   private setupRoutes() {
     this.router.post("/sign_in", sign_in);
-    this.router.post("/sign_up", () => {});
+    this.router.post("/sign_up", sign_up);
   }
 
   getRouter() {
