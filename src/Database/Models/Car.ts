@@ -1,9 +1,10 @@
 import { DataTypes } from "sequelize";
 import { connection } from "../../../config/database/connect";
-import { UserInstance } from "../../Types/user";
+import { CarInstance } from "../../Types/car";
+import { Brand } from "./Brand";
 
-export const User = connection.define<UserInstance>(
-  "users",
+export const Car = connection.define<CarInstance>(
+  "cars",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,15 +13,15 @@ export const User = connection.define<UserInstance>(
       allowNull: false,
       unique: true,
     },
-    login: {
-      type: DataTypes.STRING,
-      unique: true,
+    brand_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    model: { type: DataTypes.STRING },
+    price: { type: DataTypes.STRING },
+    description: { type: DataTypes.STRING },
+    mileage: { type: DataTypes.INTEGER },
+    img: { type: DataTypes.STRING },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: connection.literal("CURRENT_TIMESTAMP"),
@@ -33,8 +34,9 @@ export const User = connection.define<UserInstance>(
     },
   },
   {
-    modelName: "User",
+    modelName: "Car",
   }
 );
 
+Car.hasOne(Brand, { foreignKey: "brand_id" });
 connection.sync();

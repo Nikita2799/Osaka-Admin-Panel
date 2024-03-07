@@ -10,7 +10,7 @@ const options: cors.CorsOptions = {
     "X-Access-Token",
     "Authorization",
   ],
-  origin: "http://localhost:3000",
+  origin: "*",
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   preflightContinue: false,

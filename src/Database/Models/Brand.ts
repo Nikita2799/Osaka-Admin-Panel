@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
 import { connection } from "../../../config/database/connect";
-import { UserInstance } from "../../Types/user";
+import { BrandInstance } from "../../Types/brand";
 
-export const User = connection.define<UserInstance>(
-  "users",
+export const Brand = connection.define<BrandInstance>(
+  "brands",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,12 +12,7 @@ export const User = connection.define<UserInstance>(
       allowNull: false,
       unique: true,
     },
-    login: {
-      type: DataTypes.STRING,
-      unique: true,
-      allowNull: false,
-    },
-    password: {
+    brand: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -33,7 +28,7 @@ export const User = connection.define<UserInstance>(
     },
   },
   {
-    modelName: "User",
+    modelName: "Brand",
   }
 );
 
