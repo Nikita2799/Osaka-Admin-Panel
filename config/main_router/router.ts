@@ -11,6 +11,7 @@ const importRouters = () => {
   const routerFiles = glob.sync(
     path.resolve(__dirname, "../../src/Routers/**/*.router.ts")
   );
+  console.log(routerFiles);
 
   routerFiles.forEach((routerFile) => {
     const routerModule = require(routerFile);
