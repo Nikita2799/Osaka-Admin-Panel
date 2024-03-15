@@ -10,8 +10,10 @@ export const create = async (
   next: NextFunction
 ) => {
   try {
+    const { images }: any = req.files;
     const data = <BlogResponse>req.body;
 
+    data.images = images.map((e: any) => e.filename);
     const data_create = create_data(data);
     console.log(data_create);
 

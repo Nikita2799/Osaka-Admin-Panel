@@ -11,12 +11,11 @@ export const create = async (
 ) => {
   try {
     const { images }: any = req.files;
-    const imagesBase64 = images.map((image: any) => {
-      return image.buffer.toString("base64");
-    });
+    console.log(req.files);
 
     const car = <CarAttributes>req.body;
-    car.images = imagesBase64;
+    car.images = images.map((e: any) => e.filename);
+
     const result = await carWorker.create(car);
     res.status(201).json(result);
   } catch (err) {

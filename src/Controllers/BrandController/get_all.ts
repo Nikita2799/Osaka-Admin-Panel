@@ -10,7 +10,7 @@ export const get_all = async (
 ) => {
   try {
     const brand_list = await brandWorker.get_all();
-    res.status(201).json(brand_list);
+    res.status(200).json(brand_list);
   } catch (err) {
     next(err);
   }

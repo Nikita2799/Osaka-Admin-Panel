@@ -7,6 +7,7 @@ class ExpressService {
   constructor() {
     this.app = express();
     this.app.use(express.json());
+    this.app.use(express.static("uploads"));
     this.app.use("/api", router);
   }
 
