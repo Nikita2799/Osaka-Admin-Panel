@@ -11,7 +11,7 @@ export const get_all = async (
 ) => {
   try {
     const blog_list = await blogWorker.get_all();
-    res.status(201).json(blog_list);
+    res.status(200).json(blog_list);
   } catch (err) {
     next(err);
   }
