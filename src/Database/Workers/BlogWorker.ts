@@ -25,6 +25,6 @@ export class BlogWorker {
   }
 
   async delete(id: any) {
-    return await this.blog.destroy({ where: id });
+    return await this.blog.destroy({ where: { id: id } });
   }
 }

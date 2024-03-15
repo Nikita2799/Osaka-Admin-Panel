@@ -10,7 +10,7 @@ export const delete_brand = async (
 ) => {
   try {
     const { id } = req.params;
-    await blogHandler.delete(id);
+    await blogHandler.delete(+id);
 
     res.status(200).json("ok");
   } catch (err) {
