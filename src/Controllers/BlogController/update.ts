@@ -11,7 +11,7 @@ export const update = async (
   try {
     const update_date = req.body;
     const blog = await blogWorker.update(update_date);
-    res.status(201).json(blog);
+    res.status(200).json(blog);
   } catch (err) {
     next(err);
   }

@@ -27,7 +27,12 @@ class BlogRouter {
       create
     );
     this.router.get("/blog", AuthenticationMiddelware.isLogin, get_all);
-    this.router.patch("/blog", AuthenticationMiddelware.isLogin, update);
+    this.router.patch(
+      "/blog",
+      AuthenticationMiddelware.isLogin,
+      this.upload.fields([{ name: "images" }]),
+      update
+    );
     this.router.get("/blog_one", AuthenticationMiddelware.isLogin, get);
     this.router.delete(
       "/blog/:id",
