@@ -5,10 +5,13 @@ import uuid from "short-uuid";
 export class MulterService {
   private upload;
   private storage;
-
+  max_size = 20 * 1024 * 1024;
   constructor() {
     this.storage = this.get_storage();
-    this.upload = multer({ storage: this.storage });
+    this.upload = multer({
+      storage: this.storage,
+      limits: { fileSize: this.max_size },
+    });
   }
 
   private get_storage() {
