@@ -2,6 +2,7 @@ import { Router } from "express";
 import AuthenticationMiddelware from "../../Middelwares/auth.middelware";
 import { update } from "../../Controllers/LandingController/update";
 import { get } from "../../Controllers/LandingController/get";
+import { main_get } from "../../Controllers/LandingController/main_get";
 
 class UserRouter {
   private router: Router;
@@ -13,6 +14,11 @@ class UserRouter {
 
   private setupRoutes() {
     this.router.get("/landing", AuthenticationMiddelware.isLogin, get);
+    this.router.get(
+      "/main_landing",
+      AuthenticationMiddelware.isLogin,
+      main_get
+    );
     this.router.patch("/landing", AuthenticationMiddelware.isLogin, update);
   }
 

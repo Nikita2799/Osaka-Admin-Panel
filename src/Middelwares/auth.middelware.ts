@@ -6,7 +6,7 @@ import TokenService from "../Services/TokenService";
 const tokenService = new TokenService();
 
 class AuthenticationMiddelware {
-  static async isLogin(req: Request, res: Response, next: NextFunction) {
+  static async isLogin(req: any, res: Response, next: NextFunction) {
     const token = req.headers.authorization;
 
     if (!token) {
@@ -18,7 +18,7 @@ class AuthenticationMiddelware {
     try {
       const decoded = tokenService.verifyToken(token); // Замените 'your-secret-key' на ваш секретный ключ
 
-      req.body.user = decoded;
+      req.user! = decoded;
 
       next();
     } catch (error) {

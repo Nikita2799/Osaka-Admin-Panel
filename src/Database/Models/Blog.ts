@@ -1,10 +1,9 @@
 import { DataTypes } from "sequelize";
 import { connection } from "../../../config/database/connect";
-import { BrandInstance } from "../../Types/brand";
-import { Car } from "./Car";
+import { BlogInstance } from "../../Types/blog";
 
-export const Brand = connection.define<BrandInstance>(
-  "brands",
+export const Blog = connection.define<BlogInstance>(
+  "blogs",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,11 +12,11 @@ export const Brand = connection.define<BrandInstance>(
       allowNull: false,
       unique: true,
     },
-    brand: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
+    title_en: { type: DataTypes.STRING },
+    title_ja: { type: DataTypes.STRING },
+    text_en: { type: DataTypes.JSONB },
+    text_ja: { type: DataTypes.JSONB },
+    images: { type: DataTypes.ARRAY(DataTypes.STRING) },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: connection.literal("CURRENT_TIMESTAMP"),
@@ -30,8 +29,8 @@ export const Brand = connection.define<BrandInstance>(
     },
   },
   {
-    modelName: "Brand",
+    modelName: "Blog",
   }
 );
-// Brand.hasMany(Car, { foreignKey: "id" });
+
 connection.sync();

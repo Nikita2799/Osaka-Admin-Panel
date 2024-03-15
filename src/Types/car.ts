@@ -2,13 +2,14 @@ import { Model, Optional } from "sequelize";
 
 export interface CarAttributes {
   id?: number;
+  record_id: string;
   brand?: string;
   brand_id: number;
   model: string;
   price: string;
   mileage: number;
   description: string;
-  img: string;
+  images: Array<string>;
   createdAt?: Date;
   updatedAt?: Date;
 }

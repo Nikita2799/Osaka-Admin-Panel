@@ -17,11 +17,12 @@ export const Car = connection.define<CarInstance>(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    record_id: { type: DataTypes.STRING, unique: true },
     model: { type: DataTypes.STRING },
     price: { type: DataTypes.STRING },
     description: { type: DataTypes.STRING },
     mileage: { type: DataTypes.INTEGER },
-    img: { type: DataTypes.STRING },
+    images: { type: DataTypes.ARRAY(DataTypes.STRING) },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: connection.literal("CURRENT_TIMESTAMP"),
@@ -38,5 +39,5 @@ export const Car = connection.define<CarInstance>(
   }
 );
 
-Car.hasOne(Brand, { foreignKey: "brand_id" });
+Car.belongsTo(Brand, { foreignKey: "brand_id", targetKey: "id" });
 connection.sync();

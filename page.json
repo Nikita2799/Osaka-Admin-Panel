@@ -4,7 +4,7 @@
       "buy": [
         {
           "id": 1,
-          "title": "From Auction",
+          "title": "1",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
@@ -26,7 +26,7 @@
       "actions": [
         {
           "id": 1,
-          "title": "Auction Houses",
+          "title": "Пики точоные",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
@@ -126,33 +126,27 @@
       "background_image": ""
     },
     "count_block": [
-      { "id": 1, "title": "Cars", "count": "24000" },
-      { "id": 2, "title": "Cars", "count": "15000" },
-      { "id": 3, "title": "Deals", "count": "23000" }
+      {
+        "id": 1,
+        "title": "Cars",
+        "count": "24000"
+      },
+      {
+        "id": 2,
+        "title": "Cars",
+        "count": "15000"
+      },
+      {
+        "id": 3,
+        "title": "Deals",
+        "count": "23000"
+      }
     ],
     "brand_block": {
       "header": "Most Popular Category",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "brands": ["Mazda", "BMW", "Subaru", "Lincoln", "Volkswagen", "Audi", "Tesla", "Porsche", "Skoda", "Toyota", "Kia", "Reno", "Audi", "Acura", "Alfa Romeo", "Aston Martin", "Abarth", "Avanti", "Ariel",  "AC Cars", "Alpine"]
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
-    "updates_blog": [
-      { "id": 1,
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        "image": "" },
-      { "id": 2, 
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" },
-      { "id": 3,
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" },
-      { "id": 4, 
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" },
-      { "id": 5, 
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" }
-    ],
-
+    "updates_blog": [],
     "footer": {
       "phone_number": "06-6753-8300",
       "e-mail": "info@osakamotors.co.jp",
@@ -160,13 +154,12 @@
       "map_url": ""
     }
   },
-
   "ja": {
     "header": {
       "buy": [
         {
           "id": 1,
-          "title": "オークションから",
+          "title": "2",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
@@ -188,7 +181,7 @@
       "actions": [
         {
           "id": 1,
-          "title": "Auction Houses",
+          "title": "Хуи дрочоные",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
@@ -282,43 +275,206 @@
     },
     "main_block": {
       "name_company": "OsakaMotors",
-      "h1": "Drive Your Dreams",
+      "header": "Drive Your Dreams",
       "text": "Unleash the Thrill of Winning at Auto Auctions!",
       "button": "Catalog",
-      "image": ""
+      "background_image": ""
     },
     "count_block": [
-      { "id": 1, "title": "Cars", "count": "24000" },
-      { "id": 2, "title": "Cars", "count": "15000" },
-      { "id": 3, "title": "Deals", "count": "23000" }
+      {
+        "id": 1,
+        "title": "Cars",
+        "count": "24000"
+      },
+      {
+        "id": 2,
+        "title": "Cars",
+        "count": "15000"
+      },
+      {
+        "id": 3,
+        "title": "Deals",
+        "count": "23000"
+      }
     ],
     "brand_block": {
-      "h1": "Most Popular Category",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "brands": ["Mazda", "BMW", "Subaru", "Lincoln", "Volkswagen", "Audi", "Tesla", "Porsche", "Skoda", "Toyota", "Kia", "Reno", "Audi", "Acura", "Alfa Romeo", "Aston Martin", "Abarth", "Avanti", "Ariel",  "AC Cars", "Alpine"]
+      "header": "Most Popular Category",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
-    "updates_blog": [
-      { "id": 1,
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        "image": "" },
-      { "id": 2, 
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" },
-      { "id": 3,
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" },
-      { "id": 4, 
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" },
-      { "id": 5, 
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", 
-        "image": "" }
-    ],
+    "updates_blog": [],
     "footer": {
-      "phone_number": "06-6753-8300",
+      "phone_number": "japan",
       "e-mail": "info@osakamotors.co.jp",
       "website_link": "osakamotors.co.jp",
       "map_url": ""
     }
-  }
+  },
+  "car_brands": {
+    "all_brands": [
+      {
+        "id": 1,
+        "brand": "Mazda",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 2,
+        "brand": "BMW",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 3,
+        "brand": "Subaru",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 4,
+        "brand": "Lincoln",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 5,
+        "brand": "Volkswagen",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 6,
+        "brand": "Audi",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 7,
+        "brand": "Tesla",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 8,
+        "brand": "Porsche",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 9,
+        "brand": "Skoda",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 10,
+        "brand": "Toyota",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 11,
+        "brand": "Kia",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 12,
+        "brand": "Reno",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 13,
+        "brand": "Acura",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 14,
+        "brand": "Alfa Romeo",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 15,
+        "brand": "Aston Martin",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 16,
+        "brand": "Abarth",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 17,
+        "brand": "Avanti",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 18,
+        "brand": "Ariel",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 19,
+        "brand": "AC Cars",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      },
+      {
+        "id": 20,
+        "brand": "Alpine",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      }
+    ],
+    "selected_brands": [
+      {
+        "id": 23,
+        "brand": "Reno",
+        "createdAt": "2024-03-07T14:18:35.004Z",
+        "updatedAt": "2024-03-07T14:18:35.004Z",
+        "brand_id": null
+      }
+    ]
+  },
+  "selected_blogs": [
+    {
+      "id": 3,
+      "title": "Lorem tuda-siyda"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ]
 }

@@ -10,7 +10,13 @@ export const create = async (
   next: NextFunction
 ) => {
   try {
+    const { images }: any = req.files;
+    const imagesBase64 = images.map((image: any) => {
+      return image.buffer.toString("base64");
+    });
+
     const car = <CarAttributes>req.body;
+    car.images = imagesBase64;
     const result = await carWorker.create(car);
     res.status(201).json(result);
   } catch (err) {

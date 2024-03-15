@@ -1,7 +1,9 @@
+import { Col } from "sequelize/types/utils";
 import { CarAttributes, CarInstance } from "../../Types/car";
 import { Brand } from "../Models/Brand";
 import { Car } from "../Models/Car";
 import { BrandWorker } from "./BrandWorker";
+import { Sequelize } from "sequelize";
 
 export class CarWorker {
   private car;
@@ -18,6 +20,7 @@ export class CarWorker {
     const brand = await this.brandWorker.create_or_get({
       brand: car_params.brand!,
     });
+
     car_params.brand_id = brand.id!;
     delete car_params.brand;
 
@@ -27,7 +30,14 @@ export class CarWorker {
   async get_one(param: Partial<CarAttributes> = {}) {
     return await this.car.findOne({
       where: { ...param },
-      include: [{ model: this.brand, attributes: ["brand"] }],
+      include: [
+        {
+          model: this.brand,
+          as: "brand",
+          attributes: [],
+        },
+      ],
+      attributes: ["*", [Sequelize.col("brand"), "brand"]],
       raw: true,
     });
   }
@@ -35,7 +45,14 @@ export class CarWorker {
   async get_all(param: Partial<CarAttributes> = {}) {
     return await this.car.findAll({
       where: { ...param },
-      include: [{ model: this.brand, attributes: ["brand"] }],
+      include: [
+        {
+          model: this.brand,
+          as: "brand",
+          attributes: [],
+        },
+      ],
+      attributes: ["*", [Sequelize.col("brand"), "brand"]],
       raw: true,
     });
   }

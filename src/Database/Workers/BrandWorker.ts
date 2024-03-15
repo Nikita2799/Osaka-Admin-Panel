@@ -10,6 +10,8 @@ export class BrandWorker {
 
   async create_or_get(brand_params: BrandAttributes) {
     const brand = await this.get_one({ brand: brand_params.brand });
+    console.log(brand ? true : false);
+
     return brand ? brand : await this.brand.create({ ...brand_params });
   }
 

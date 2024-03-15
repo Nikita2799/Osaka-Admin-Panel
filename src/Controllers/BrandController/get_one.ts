@@ -12,7 +12,7 @@ export const get_one = async (
   try {
     const search_parmas = <BrandAttributes>req.body;
     const brand_list = await brandWorker.get_one(search_parmas);
-    res.status(201).json(brand_list);
+    res.status(200).json(brand_list);
   } catch (err) {
     next(err);
   }
