@@ -9,7 +9,7 @@ export const delete_car = async (
   next: NextFunction
 ) => {
   try {
-    const id = req.params;
+    const { id } = req.params;
     await carWorker.delete(+id);
   } catch (err) {
     next(err);
