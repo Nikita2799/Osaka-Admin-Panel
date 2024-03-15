@@ -15,6 +15,7 @@ export const get_all = async (
     const clear_params = filter_params(car_parmas);
     console.log(clear_params);
     const car_list = await carWorker.get_all(clear_params!);
+
     res.status(200).json(car_list);
   } catch (err) {
     next(err);

@@ -11,11 +11,13 @@ export const update = async (
   try {
     const { images }: any = req.files;
 
-    const update_date = req.body;
+    const update_data = req.body;
     if (images.length < 1) {
-      update_date.images = images.map((e: any) => e.filename);
+      update_data.images = images.map((e: any) => e.filename);
+    } else {
+      delete update_data.images;
     }
-    const blog = await blogWorker.update(update_date);
+    const blog = await blogWorker.update(update_data);
     res.status(200).json(blog);
   } catch (err) {
     next(err);
