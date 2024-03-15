@@ -14,7 +14,6 @@ class BrandRouter {
   private setupRoutes() {
     this.router.post("/brand", AuthenticationMiddelware.isLogin, create);
     this.router.get("/brand", AuthenticationMiddelware.isLogin, get_all);
-    // this.router.get('/brand')
   }
 
   getRouter() {

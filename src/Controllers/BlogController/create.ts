@@ -10,6 +10,8 @@ export const create = async (
   next: NextFunction
 ) => {
   try {
+    console.log(req.files);
+
     const { images }: any = req.files;
     const data = <BlogResponse>req.body;
 
