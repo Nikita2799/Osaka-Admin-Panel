@@ -11,6 +11,8 @@ export const delete_car = async (
   try {
     const { id } = req.params;
     await carWorker.delete(+id);
+
+    res.status(200).json();
   } catch (err) {
     next(err);
   }
