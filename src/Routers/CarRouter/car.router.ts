@@ -4,6 +4,7 @@ import { get_all } from "../../Controllers/CarController/get_all";
 import { get_one } from "../../Controllers/CarController/get_one";
 import AuthenticationMiddelware from "../../Middelwares/auth.middelware";
 import { MulterService } from "../../Services/MulterService";
+import { delete_car } from "../../Controllers/CarController/delete";
 
 class CarRouter {
   private router: Router;
@@ -26,7 +27,11 @@ class CarRouter {
     );
     this.router.get("/car", AuthenticationMiddelware.isLogin, get_all);
     this.router.get("/car_one", AuthenticationMiddelware.isLogin, get_one);
-    this.router.delete("/car/:id", AuthenticationMiddelware.isLogin, get_one);
+    this.router.delete(
+      "/car/:id",
+      AuthenticationMiddelware.isLogin,
+      delete_car
+    );
   }
 
   getRouter() {
