@@ -15,7 +15,7 @@ export class MulterService {
   }
 
   private get_storage() {
-    const path_image = path.join(__dirname, "..", "..", "uploads");
+    const path_image = path.join("/var/www/uploads");
     const short_uuid = uuid();
 
     return multer.diskStorage({
