@@ -23,14 +23,26 @@ class BlogRouter {
     this.router.post(
       "/blog",
       AuthenticationMiddelware.isLogin,
-      this.upload.fields([{ name: "images" }]),
+      this.upload.fields([
+        { name: "images", maxCount: 1 },
+        { name: "main_picture", maxCount: 1 },
+        { name: "first_pic", maxCount: 1 },
+        { name: "second_pic", maxCount: 1 },
+        { name: "third_pic", maxCount: 1 },
+      ]),
       create
     );
     this.router.get("/blog", AuthenticationMiddelware.isLogin, get_all);
     this.router.patch(
       "/blog",
       AuthenticationMiddelware.isLogin,
-      this.upload.fields([{ name: "images" }]),
+      this.upload.fields([
+        { name: "images", maxCount: 1 },
+        { name: "main_picture", maxCount: 1 },
+        { name: "first_pic", maxCount: 1 },
+        { name: "second_pic", maxCount: 1 },
+        { name: "third_pic", maxCount: 1 },
+      ]),
       update
     );
     this.router.get("/blog_one", AuthenticationMiddelware.isLogin, get);

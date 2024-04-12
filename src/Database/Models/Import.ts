@@ -1,9 +1,8 @@
 import { DataTypes } from "sequelize";
 import { connection } from "../../../config/database/connect";
-import { BlogInstance } from "../../Types/blog";
 
-export const Blog = connection.define<BlogInstance>(
-  "blogs",
+export const ImportRegal = connection.define(
+  "imports",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,14 +11,13 @@ export const Blog = connection.define<BlogInstance>(
       allowNull: false,
       unique: true,
     },
-    title: { type: DataTypes.JSONB },
-    text_block_first: { type: DataTypes.JSONB },
-    text_block_second: { type: DataTypes.JSONB },
-    text_block_third: { type: DataTypes.JSONB },
-    text_block_fourth: { type: DataTypes.JSONB },
-    text_block_fifth: { type: DataTypes.JSONB },
-    article_img: { type: DataTypes.JSONB },
-    caption: { type: DataTypes.JSONB },
+    code: { type: DataTypes.STRING },
+    title_en: { type: DataTypes.STRING },
+    title_ja: { type: DataTypes.STRING },
+    isTable: { type: DataTypes.BOOLEAN },
+    table: { type: DataTypes.ARRAY(DataTypes.JSONB) },
+    main_block: { type: DataTypes.ARRAY(DataTypes.JSONB) },
+    references: { type: DataTypes.ARRAY(DataTypes.JSONB) },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: connection.literal("CURRENT_TIMESTAMP"),
@@ -32,7 +30,7 @@ export const Blog = connection.define<BlogInstance>(
     },
   },
   {
-    modelName: "Blog",
+    modelName: "Benefit",
   }
 );
 

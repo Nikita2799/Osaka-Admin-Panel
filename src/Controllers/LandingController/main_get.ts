@@ -3,9 +3,11 @@ import fs from "fs";
 import path from "path";
 import { BlogWorker } from "../../Database/Workers/BlogWorker";
 import { BrandWorker } from "../../Database/Workers/BrandWorker";
+import { BenefitWorker } from "../../Database/Workers/BenefitWorker";
 
 const blogWorker = new BlogWorker();
 const brandWorker = new BrandWorker();
+const benefit = new BenefitWorker();
 
 export const main_get = async (
   req: Request,
@@ -22,22 +24,53 @@ export const main_get = async (
     const brands = await brandWorker.get_all();
     const selected_blogs = data["selected_blogs"];
     const selected_brands = data["car_brands"]["selected_brands"];
+    const benefit_image: any = await benefit.get_all({});
 
-    data[lang]["updates_blog"] = blogs.map((e) => {
+    data["en"]["updates_blog"] = blogs.map((e) => {
       return selected_blogs.find((blog: any) => {
         if (!blog) return false;
         return e.id === blog.id ? true : false;
       });
     });
 
-    data[lang]["brand_block"]["brands"] = brands.map((e) => {
-      return selected_brands.find((brand: any) => {
-        if (!brand) return false;
-        return e.id === brand.id ? true : false;
+    // data["en"]["brand_block"]["brands"] = brands.map((e) => {
+    //   return selected_brands.find((brand: any) => {
+    //     if (!brand) return false;
+    //     return e.id === brand.id ? true : false;
+    //   });
+    // });
+
+    data["ja"]["updates_blog"] = blogs.map((e) => {
+      return selected_blogs.find((blog: any) => {
+        if (!blog) return false;
+        return e.id === blog.id ? true : false;
       });
     });
 
-    res.status(200).json(data[lang]);
+    data["ja"]["privilegeBlock"] = data["ja"]["privilegeBlock"].map(
+      (e: any, i: any) => {
+        return {
+          ...e,
+          img_url: benefit_image[0].images[i],
+        };
+      }
+    );
+    data["en"]["privilegeBlock"] = data["en"]["privilegeBlock"].map(
+      (e: any, i: any) => {
+        return {
+          ...e,
+          img_url: benefit_image[0].images[i],
+        };
+      }
+    );
+    // data["ja"]["brand_block"]["brands"] = brands.map((e) => {
+    //   return selected_brands.find((brand: any) => {
+    //     if (!brand) return false;
+    //     return e.id === brand.id ? true : false;
+    //   });
+    // });
+
+    res.status(200).json(data);
   } catch (err) {
     next(err);
   }

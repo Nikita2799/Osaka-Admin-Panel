@@ -9,7 +9,7 @@ export class BlogWorker {
   }
 
   async create(params: BlogAttributes) {
-    return await this.blog.create(params);
+    return await this.blog.create({ ...params });
   }
 
   async get_one(param: Partial<BlogAttributes> = {}) {
