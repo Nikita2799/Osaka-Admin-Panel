@@ -9,7 +9,7 @@ router.use(corsSettings);
 
 const importRouters = () => {
   const routerFiles = glob.sync(
-    path.resolve(__dirname, "../../src/Routers/**/*.router.ts")
+    path.resolve(__dirname, "../../src/Routers/**/*.router.js")
   );
   console.log(routerFiles);
 
