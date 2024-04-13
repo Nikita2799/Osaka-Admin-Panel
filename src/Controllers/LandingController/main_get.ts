@@ -48,15 +48,6 @@ export const main_get = async (
       });
     });
 
-    data["ja"]["updates_blog"] = blogs.map((e) => {
-      console.log(e, "ja");
-      return selected_blogs.find((blog: any) => {
-        if (!blog) return false;
-
-        return e.id === blog ? true : false;
-      });
-    });
-
     data["ja"]["privilegeBlock"] = data["ja"]["privilegeBlock"].map(
       (e: any, i: any) => {
         return {
