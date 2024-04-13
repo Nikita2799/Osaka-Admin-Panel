@@ -27,8 +27,12 @@ export const main_get = async (
     const benefit_image: any = await benefit.get_all({});
 
     data["en"]["updates_blog"] = blogs.map((e) => {
+      console.log(e);
+
       return selected_blogs.find((blog: any) => {
         if (!blog) return false;
+        console.log(blog.id);
+
         return e.id === blog.id ? true : false;
       });
     });
@@ -43,7 +47,9 @@ export const main_get = async (
     console.log(data["ja"]["updates_blog"]);
 
     data["ja"]["updates_blog"] = blogs.map((e) => {
+      console.log(e, "ja");
       return selected_blogs.find((blog: any) => {
+        console.log(blog.id, "ja");
         if (!blog) return false;
         return e.id === blog.id ? true : false;
       });
