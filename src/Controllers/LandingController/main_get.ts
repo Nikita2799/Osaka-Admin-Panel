@@ -21,6 +21,7 @@ export const main_get = async (
     const data = JSON.parse(file);
 
     const blogs = await blogWorker.get_all();
+    console.log("🚀 ~ blogs:", blogs);
     const brands = await brandWorker.get_all();
     const selected_blogs = data["selected_blogs"];
     const selected_brands = data["car_brands"]["selected_brands"];
@@ -50,8 +51,8 @@ export const main_get = async (
     data["ja"]["updates_blog"] = blogs.map((e) => {
       console.log(e, "ja");
       return selected_blogs.find((blog: any) => {
-        console.log(blog.id, "ja");
         if (!blog) return false;
+        console.log(blog.id, "ja");
         return e.id === blog.id ? true : false;
       });
     });
