@@ -31,7 +31,7 @@ export const main_get = async (
 
     data["currency"] = currency.jpy;
 
-    data["en"]["updates_blog"] = selected_blogs.map((e: any) => {
+    data["en"]["updates_blog"]["blogs"] = selected_blogs.map((e: any) => {
       return blogs.find((blog: any) => {
         if (!e) return false;
 
@@ -45,7 +45,7 @@ export const main_get = async (
     //   });
     // });
 
-    data["ja"]["updates_blog"] = selected_blogs.map((e: any) => {
+    data["ja"]["updates_blog"]["blogs"] = selected_blogs.map((e: any) => {
       return blogs.find((blog: any) => {
         if (!e) return false;
 
@@ -53,7 +53,7 @@ export const main_get = async (
       });
     });
 
-    data["ja"]["privilegeBlock"] = data["ja"]["privilegeBlock"].map(
+    data["ja"]["privilegeBlock"]["blocks"] = data["ja"]["privilegeBlock"].map(
       (e: any, i: any) => {
         return {
           ...e,
@@ -61,7 +61,7 @@ export const main_get = async (
         };
       }
     );
-    data["en"]["privilegeBlock"] = data["en"]["privilegeBlock"].map(
+    data["en"]["privilegeBlock"]["blocks"] = data["en"]["privilegeBlock"].map(
       (e: any, i: any) => {
         return {
           ...e,

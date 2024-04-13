@@ -16,14 +16,14 @@ export const get = async (req: Request, res: Response, next: NextFunction) => {
     const benefit_image: any = await benefit.get_all({});
     const blogs = await blogWorker.get_all();
 
-    data["en"]["updates_blog"] = blogs.map((e) => {
+    data["en"]["updates_blog"]["blogs"] = blogs.map((e) => {
       return e;
     });
-    data["ja"]["updates_blog"] = blogs.map((e) => {
+    data["ja"]["updates_blog"]["blogs"] = blogs.map((e) => {
       return e;
     });
 
-    data["ja"]["privilegeBlock"] = data["ja"]["privilegeBlock"].map(
+    data["ja"]["privilegeBlock"] = data["ja"]["privilegeBlock"]["blocks"].map(
       (e: any, i: any) => {
         return {
           ...e,
@@ -32,7 +32,7 @@ export const get = async (req: Request, res: Response, next: NextFunction) => {
       }
     );
 
-    data["en"]["privilegeBlock"] = data["en"]["privilegeBlock"].map(
+    data["en"]["privilegeBlock"] = data["en"]["privilegeBlock"]["blocks"].map(
       (e: any, i: any) => {
         return {
           ...e,
