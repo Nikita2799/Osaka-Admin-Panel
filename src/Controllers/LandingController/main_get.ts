@@ -25,13 +25,14 @@ export const main_get = async (
     const selected_blogs = data["selected_blogs"];
     const selected_brands = data["car_brands"]["selected_brands"];
     const benefit_image: any = await benefit.get_all({});
+    console.log(selected_blogs);
 
     data["en"]["updates_blog"] = blogs.map((e) => {
-      console.log(e);
+      console.log(e, "map e");
 
       return selected_blogs.find((blog: any) => {
         if (!blog) return false;
-        console.log(blog.id);
+        console.log(blog.id, "finde blog");
 
         return e.id === blog.id ? true : false;
       });
