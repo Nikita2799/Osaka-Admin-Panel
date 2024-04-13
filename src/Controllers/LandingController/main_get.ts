@@ -32,6 +32,7 @@ export const main_get = async (
         return e.id === blog.id ? true : false;
       });
     });
+    console.log(data["en"]["updates_blog"]);
 
     // data["en"]["brand_block"]["brands"] = brands.map((e) => {
     //   return selected_brands.find((brand: any) => {
@@ -39,6 +40,7 @@ export const main_get = async (
     //     return e.id === brand.id ? true : false;
     //   });
     // });
+    console.log(data["ja"]["updates_blog"]);
 
     data["ja"]["updates_blog"] = blogs.map((e) => {
       return selected_blogs.find((blog: any) => {
