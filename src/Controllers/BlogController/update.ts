@@ -48,7 +48,7 @@ export const update = async (
       };
     }
     if ("images" in req.files!) {
-      blog_pic = req.files["blog_pic"][0].filename;
+      blog_pic = req.files["images"][0].filename;
       images = {
         ...images,
         blog_pic,
