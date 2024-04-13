@@ -23,23 +23,23 @@ export const get = async (req: Request, res: Response, next: NextFunction) => {
       return e;
     });
 
-    data["ja"]["privilegeBlock"] = data["ja"]["privilegeBlock"]["blocks"].map(
-      (e: any, i: any) => {
-        return {
-          ...e,
-          img_url: benefit_image[0].images[i],
-        };
-      }
-    );
+    data["ja"]["privilegeBlock"]["blocks"] = data["ja"]["privilegeBlock"][
+      "blocks"
+    ].map((e: any, i: any) => {
+      return {
+        ...e,
+        img_url: benefit_image[0].images[i],
+      };
+    });
 
-    data["en"]["privilegeBlock"] = data["en"]["privilegeBlock"]["blocks"].map(
-      (e: any, i: any) => {
-        return {
-          ...e,
-          img_url: benefit_image[0].images[i],
-        };
-      }
-    );
+    data["en"]["privilegeBlock"]["blocks"] = data["en"]["privilegeBlock"][
+      "blocks"
+    ].map((e: any, i: any) => {
+      return {
+        ...e,
+        img_url: benefit_image[0].images[i],
+      };
+    });
 
     res.status(200).json(data);
   } catch (err) {
