@@ -53,22 +53,22 @@ export const main_get = async (
       });
     });
 
-    data["ja"]["privilegeBlock"]["blocks"] = data["ja"]["privilegeBlock"].map(
-      (e: any, i: any) => {
-        return {
-          ...e,
-          img_url: benefit_image[0].images[i],
-        };
-      }
-    );
-    data["en"]["privilegeBlock"]["blocks"] = data["en"]["privilegeBlock"].map(
-      (e: any, i: any) => {
-        return {
-          ...e,
-          img_url: benefit_image[0].images[i],
-        };
-      }
-    );
+    data["ja"]["privilegeBlock"]["blocks"] = data["ja"]["privilegeBlock"][
+      "blocks"
+    ].map((e: any, i: any) => {
+      return {
+        ...e,
+        img_url: benefit_image[0].images[i],
+      };
+    });
+    data["en"]["privilegeBlock"]["blocks"] = data["en"]["privilegeBlock"][
+      "blocks"
+    ].map((e: any, i: any) => {
+      return {
+        ...e,
+        img_url: benefit_image[0].images[i],
+      };
+    });
     // data["ja"]["brand_block"]["brands"] = brands.map((e) => {
     //   return selected_brands.find((brand: any) => {
     //     if (!brand) return false;
