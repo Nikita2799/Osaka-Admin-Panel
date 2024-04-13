@@ -13,7 +13,7 @@ class AuthRouter {
 
   private setupRoutes() {
     this.router.patch("/import", AuthenticationMiddelware.isLogin, update);
-    this.router.get("/import", AuthenticationMiddelware.isLogin, get);
+    this.router.get("/import", get);
   }
 
   getRouter() {
