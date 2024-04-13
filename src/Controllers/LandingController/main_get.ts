@@ -4,10 +4,12 @@ import path from "path";
 import { BlogWorker } from "../../Database/Workers/BlogWorker";
 import { BrandWorker } from "../../Database/Workers/BrandWorker";
 import { BenefitWorker } from "../../Database/Workers/BenefitWorker";
+import { CurrencyWorker } from "../../Database/Workers/CurrencyWorker";
 
 const blogWorker = new BlogWorker();
 const brandWorker = new BrandWorker();
 const benefit = new BenefitWorker();
+const currencyWorker = new CurrencyWorker();
 
 export const main_get = async (
   req: Request,
@@ -25,6 +27,9 @@ export const main_get = async (
     const selected_blogs = data["selected_blogs"];
     const selected_brands = data["car_brands"]["selected_brands"];
     const benefit_image: any = await benefit.get_all({});
+    const currency: any = await currencyWorker.get({});
+
+    data["currency"] = currency.jpy;
 
     data["en"]["updates_blog"] = selected_blogs.map((e: any) => {
       return blogs.find((blog: any) => {
