@@ -21,24 +21,18 @@ export const main_get = async (
     const data = JSON.parse(file);
 
     const blogs = await blogWorker.get_all();
-    console.log("🚀 ~ blogs:", blogs);
     const brands = await brandWorker.get_all();
     const selected_blogs = data["selected_blogs"];
     const selected_brands = data["car_brands"]["selected_brands"];
     const benefit_image: any = await benefit.get_all({});
-    console.log(selected_blogs);
 
     data["en"]["updates_blog"] = blogs.map((e) => {
-      console.log(e, "map e");
-
       return selected_blogs.find((blog: any) => {
         if (!blog) return false;
-        console.log(blog.id, "finde blog");
 
-        return e.id === blog.id ? true : false;
+        return e.id === blog ? true : false;
       });
     });
-    console.log(data["en"]["updates_blog"]);
 
     // data["en"]["brand_block"]["brands"] = brands.map((e) => {
     //   return selected_brands.find((brand: any) => {
@@ -46,14 +40,13 @@ export const main_get = async (
     //     return e.id === brand.id ? true : false;
     //   });
     // });
-    console.log(data["ja"]["updates_blog"]);
 
     data["ja"]["updates_blog"] = blogs.map((e) => {
       console.log(e, "ja");
       return selected_blogs.find((blog: any) => {
         if (!blog) return false;
-        console.log(blog.id, "ja");
-        return e.id === blog.id ? true : false;
+
+        return e.id === blog ? true : false;
       });
     });
 
