@@ -14,11 +14,7 @@ class UserRouter {
 
   private setupRoutes() {
     this.router.get("/landing", AuthenticationMiddelware.isLogin, get);
-    this.router.get(
-      "/main_landing",
-      AuthenticationMiddelware.isLogin,
-      main_get
-    );
+    this.router.get("/main_landing", main_get);
     this.router.patch("/landing", AuthenticationMiddelware.isLogin, update);
   }
 
