@@ -26,20 +26,27 @@ export const main_get = async (
     const selected_brands = data["car_brands"]["selected_brands"];
     const benefit_image: any = await benefit.get_all({});
 
-    data["en"]["updates_blog"] = blogs.map((e) => {
-      return selected_blogs.find((blog: any) => {
-        if (!blog) return false;
+    data["en"]["updates_blog"] = selected_blogs.map((e: any) => {
+      return blogs.find((blog: any) => {
+        if (!e) return false;
 
-        return e.id === blog ? true : false;
+        return blog.id === e ? true : false;
       });
     });
-
     // data["en"]["brand_block"]["brands"] = brands.map((e) => {
     //   return selected_brands.find((brand: any) => {
     //     if (!brand) return false;
     //     return e.id === brand.id ? true : false;
     //   });
     // });
+
+    data["ja"]["updates_blog"] = selected_blogs.map((e: any) => {
+      return blogs.find((blog: any) => {
+        if (!e) return false;
+
+        return blog.id === e ? true : false;
+      });
+    });
 
     data["ja"]["updates_blog"] = blogs.map((e) => {
       console.log(e, "ja");
