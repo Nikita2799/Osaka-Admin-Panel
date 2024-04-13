@@ -10,7 +10,10 @@ export class ImportWorker {
   async update(param: any) {
     console.log(param);
 
-    return await this.import.update({ ...param }, { where: param.code });
+    return await this.import.update(
+      { ...param },
+      { where: { code: param.code } }
+    );
   }
 
   async get(code: any) {
